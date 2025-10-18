@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal (Currículo Online) - Formação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Portfólio Pessoal">
+</head>
+<body>
+
+    <header class="main-header">
+
+        <!-- CABEÇALHO FIXO - Comum a todas as páginas -->
+
+        <nav>
+            <ul class="nav-links-unificada">
+                <li><a href="sobre.html">Sobre mim</a></li> 
+                <li><a href="formacao.html" class="ativo">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Início</a></li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Tema Escuro</button>
+    </header>
+
+    <main>
+        
+        <!--Texto sobre formação-->
+        <h1>Minha Formação</h1>
+        
+        <section>
+            <h2>Graduação e Atividades Acadêmicas</h2>
+            <ul class="lista-detalhes">
+                <li>
+                    <strong>Bacharelado em Engenharia de Software</strong>
+                    <p>Universidade [Nome da sua Universidade] | 2024 - [Ano de Conclusão]</p>
+                    <p><strong>Status:</strong> Início do Segundo Ano. Foco em lógica de programação, análise de requisitos e fundamentos de banco de dados.</p>
+                </li>
+                <li>
+                    <strong>Atividade Extensionista de Cunho Social</strong>
+                    <p>Realização de atividade obrigatória de extensão, aplicando conhecimentos acadêmicos em projetos de impacto social e comunitário.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <ul class="lista-detalhes">
+                <li>
+                    <strong>Português:</strong> Nativo
+                </li>
+                <li>
+                    <strong>Espanhol:</strong> Intermediário (Em estudo contínuo).
+                </li>
+                <li>
+                    <strong>Inglês:</strong> Intermediário (Foco em leitura técnica e documentação).
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-title">Notificação</h3>
+            <p id="modal-message">Mensagem de confirmação.</p>
+            <button id="modal-close-btn">OK</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

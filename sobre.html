@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Portfólio Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <header class="main-header">
+        <!-- CABEÇALHO FIXO - Comum a todas as páginas -->
+
+        <nav>
+            <ul>
+                <li><a href="sobre.html" class="ativo">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Início</a></li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Tema Escuro</button>
+    </header>
+        <!-- Campo de Apresentação -->
+    <main>
+        <h1>Agenor Ferreira de Freitas Junior</h1>
+
+        <section>
+            <h2>Apresentação</h2>
+            <p>Sou estudante de Engenharia de Software na UNINTER, unindo minha experiência administrativa à área tecnológica, com foco em desenvolvimento, lógica e análise de sistemas.</p>
+        </section>
+
+        <section>
+            <h2>Objetivo</h2>
+            <p>Concluir minha graduação e abrir minha própria empresa voltada à inclusão digital e soluções web acessíveis.</p>
+        </section>
+    </main>
+
+    <!-- Modal de confirmação (necessário para script.js) -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-title">Notificação</h3>
+            <p id="modal-message">Mensagem de confirmação.</p>
+            <button id="modal-close-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

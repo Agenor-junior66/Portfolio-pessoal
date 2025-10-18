@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal (Currículo Online) - Contato</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Portfólio Pessoal">
+</head>
+<body>
+
+    <header class="main-header">
+
+              <!-- CABEÇALHO FIXO - Comum a todas as páginas -->
+
+        <nav>
+            <ul class="nav-links-unificada">
+                <li><a href="sobre.html">Sobre mim</a></li> 
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html" class="ativo">Contato</a></li>
+                <li><a href="index.html">Início</a></li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Tema Escuro</button>
+    </header>
+
+    <main>
+        <!--Formulário para corresponder-->
+        <h1>Entre em Contato</h1>
+        
+        <section class="contato-container">
+            <h2>Envie uma Mensagem</h2>
+            <p>Use o formulário para enviar uma mensagem ou feedback.</p>
+            <form id="form-contato">
+                <div>
+                    <label for="tipo">Motivo do Contato:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="" disabled selected>Selecione o motivo</option>
+                        <option value="contato">Dúvida / Contato Profissional</option>
+                        <option value="feedback">Feedback sobre o Portfólio</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <section>
+
+            <!--Texto de contato pessoal-->
+            <h2>Meus Dados de Contato</h2>
+            <ul class="dados-pessoais-lista">
+                <li><strong>Nome:</strong> Agenor Ferreira de Freitas Junior</li>
+                <li><strong>Endereço:</strong> Rua Pirinópolis número 56, bairro: Campo Limpo</li>
+                <li><strong>Cidade/Estado/CEP:</strong> Feira de Santana / Bahia / 44034-213</li>
+                <li><strong>Tel. Principal:</strong> <a href="tel:+5575983309638">+55 (75) 98330-9638</a></li>
+                <li><strong>Tel. Alternativo:</strong> <a href="tel:+5575981416633">+55 (75) 98141-6633</a></li>
+                <li><strong>E-mail Principal:</strong> <a href="mailto:gino.freitasjunior2010@gmail.com">gino.freitasjunior2010@gmail.com</a></li>
+                <li><strong>E-mail Alternativo:</strong> <a href="mailto:juniorferay@hotmail.com">juniorferay@hotmail.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-title">Notificação</h3>
+            <p id="modal-message">Mensagem de confirmação.</p>
+            <button id="modal-close-btn">OK</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

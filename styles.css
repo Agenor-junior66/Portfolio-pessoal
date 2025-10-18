@@ -1,0 +1,256 @@
+/* -- Reset e Configurações Base -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+}
+
+:root {
+    /* Variáveis para o Tema Claro */
+    --cor-principal: #007bff; 
+    --cor-secundaria: #6c757d;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #343a40;
+    --cor-header: #ffffff;
+    --cor-sombra: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* -- Tema Escuro -- */
+body.dark-theme {
+    --cor-principal: #90a8ff;
+    --cor-secundaria: #adb5bd;
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-header: #1e1e1e;
+    --cor-sombra: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* -- Corpo e Texto (Estilos Gerais)-- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para a troca de tema */
+}
+
+/* -- HEADER CENTRALIZADO COM 4 COLUNAS -- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* centralizado e com largura reduzida */
+    background-color: var(--cor-header);
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 10px;
+    box-shadow: var(--cor-sombra);
+    z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    padding-bottom: 10px;
+}
+
+/* grade do menu */
+.main-header nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    list-style: none;
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* Define uma borda sólida cinza de 1 pixel */
+}
+
+.main-header nav ul li {
+  border: 1px solid #ccc; /* Define uma borda sólida cinza de 1 pixel */
+  padding: 10px; /* Adiciona um espaçamento interno para que o texto não fique colado na borda */
+  margin: 0 0; /* Adiciona um espaçamento entre os itens da lista (opcional) */
+}
+
+.main-header nav ul li:last-child {
+    border-right: none;
+}
+
+
+.main-header nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--cor-principal);
+}
+
+.main-header nav ul li a.ativo {
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+/* Botão de troca de tema dentro do header */
+#theme-toggle {
+    position: absolute;
+    right: 20px;
+    margin-top: 10px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-header);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--cor-principal);
+    transform: scale(1.05);
+}
+
+/* -- Layout principal -- */
+main {
+    padding-top: 130px; /* espaço extra para o header centralizado */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 130px 20px 40px 20px;
+}
+
+h1 {
+    color: var(--cor-principal);
+    font-size: 2.3em;
+    border-bottom: 3px solid var(--cor-principal);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--cor-principal);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--cor-header);
+    border-radius: 8px;
+    box-shadow: var(--cor-sombra);
+}
+
+/* -- Estilos Específicos para Conteúdo -- */
+/* -- Listas de formação/PPortfólio/Soft Skills -- */
+ul.lista-detalhes {
+    list-style: none;
+    padding: 0;
+}
+
+ul.lista-detalhes li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid var(--cor-secundaria);
+}
+
+/* -- Estilos de Formulário de Contato -- */
+#form-contato label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#form-contato input,
+#form-contato textarea,
+#form-contato select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 4px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+#form-contato button[type="submit"] {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#form-contato button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* -- Modal de Confirmação (JS) -- */
+/* Modal personalizado --*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.modal-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--cor-header);
+    color: var(--cor-texto);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid;
+}
+
+/* -- Mídia Queries (Responsividade) -- */
+/* -- Estilos aplicados para telas menores que 768px (Smartphones e tablets pequenos) -- */
+@media (max-width: 768px) {
+    .main-header {
+        width: 95%;
+    }
+
+    .main-header nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    #theme-toggle {
+        width: 90%;
+        margin: 10px auto 0;
+    }
+
+    main {
+        padding-top: 200px;
+    }
+}
+
+/* Garante que a imagem se adapte ao tamanho da tela */
+img {
+  width: 100%;          /* ocupa toda a largura disponível */
+  height: auto;         /* mantém a proporção original */
+  max-width: 800px;     /* limite máximo opcional */
+  display: block;       /* remove espaços em branco abaixo */
+  margin: 100px auto 0;       /* centraliza horizontalmente */
+  border-radius: 10px;  /* deixa os cantos levemente arredondados (opcional) */
+}
